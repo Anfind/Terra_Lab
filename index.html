@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name ="viewport" content="witdh=device-width,intial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.4/css/all.min.css">
+      <link rel="stylesheet" href="css/reset.css">
+      <link rel="stylesheet" href="css/app.css">
+  
+      <title>Thí nghiệm Hóa Lý</title>
+      <style>
+        /* CSS cho slideshow */
+        #slideshow {
+          position: relative;
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+        }
+        #slideshow .hero img,
+        #slideshow .hero video {
+        width: 100%;
+         height: auto;
+}
+#slideshow .slide img {
+  width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của slide */
+  height: auto; /* Cho phép ảnh tự động điều chỉnh chiều cao để giữ tỷ lệ khung hình */
+}
+        #slideshow .slides {
+          display: flex;
+          transition: transform 0.5s ease;
+        }
+        #slideshow .slide {
+          width: 100%;
+          flex-shrink: 0;
+        }
+        /* CSS cho nút chuyển ảnh */
+        .arrow {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: rgba(255, 0, 0, 0.5);
+          border: none;
+          border-radius: 50%;
+          padding: 10px;
+          cursor: pointer;
+        }
+        .arrow-left {
+          left: 0;
+        }
+        .arrow-right {
+          right: 0;
+        }
+      </style>
+    
+    </head>
+    <body>
+
+      <div id="logo-container">
+        <img src="imagine/log.png" alt="TERRA LAB">
+    </div>
+
+    <div id="content" style="display: none;">
+      <script src="myjava.js"></script>
+      <div id="wrapper">
+        <div id= "header">
+          <nav class=" container">
+            <a href="" id="logo">
+                <img src="imagine/logo.png"alt="TERRA LAB"></a>
+            <ul id="main-menu">
+              <li><a href="index.html">Trang  chủ</a></li>
+
+              
+              <li><a href="Thí nghiệm.html">Thí  nghiệm</a>
+                <ul class="sub-menu">
+                  <li><a href="Hóa Học.html">Hóa Học</a></li>
+                  <li><a href="Vật Lí.html">Vật Lí</a></li>
+                  <li><a href="Tin Học.html">Tin Học</a></li>
+                 </ul>
+              </li>
+              <li><a href="">Tài nguyên và hướng dẫn</a></li>
+              <li><a href="">Trò  chơi</a></li>
+              <li><a href="">Liên  hệ</a></li>
+            </ul>
+          </nav>
+              
+        
+        <!--<div id= "content">
+          
+        </div>
+        <div id= "footer">-->
+          
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+        <script>
+          $(document).ready(function() {
+            $(window).scroll(function() {
+              if ($(this).scrollTop() > 50) {
+                $('#header').addClass('scrolled');
+              } else {
+                $('#header').removeClass('scrolled');
+              }
+            });
+          });
+          </script>
+        <script>
+          $(document).ready(function()
+          {
+            //tim tat ca li co sub-menu va them vao class has-child
+            $('.sub-menu').parent('li').addClass('has-child');
+          });
+
+                
+        </script>
+      <!--
+      <div id = "content">
+          <h1> Cố định header babababababa </h1>
+          <nav class=" containeri">  
+
+          <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum laboriosam deleniti nostrum, nobis unde 
+              rerum corporis hic nulla ex atque, esse, officiis velit. Iure consectetur fugiat facilis repudiandae dolorum sed.<br>
+
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum laboriosam deleniti nostrum, nobis unde 
+                rerum corporis hic nulla ex atque, esse, officiis velit. Iure consectetur fugiat facilis repudiandae dolorum sed.</P>
+              
+      </nav>
+          
+
+
+        </div> -->
+      </div> 
+      
+      <div id="slideshow">
+        <div class="slides">
+          <div class="slide">
+            <video autoplay loop muted playsinline class="back-video">
+              <source src="imagine/cat.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="slide">
+            <img src="imagine/4444.png" alt="Image 1">
+          </div>
+          <div class="slide">
+            <img src="imagine/5555.png" alt="Image 2">
+          </div>
+          <div class="slide">
+            <img src="imagine/3333.png" alt="Image 3">
+          </div>
+          <div class="slide">
+            <img src="imagine/6666.png" alt="Image 4">
+          </div>
+          <div class="slide">
+            <img src="imagine/9999.png" alt="Image 4">
+          </div>
+          <div class="slide">
+            <img src="imagine/7777.png" alt="Image 4">
+          </div>
+          <div class="slide">
+            <img src="imagine/8888.png" alt="Image 4">
+          </div>
+          
+        </div>
+        <!-- Nút để chuyển đổi hình ảnh -->
+        <button class="arrow arrow-left" onclick="prevImage()"><i class="fas fa-chevron-left"></i></button>
+        <button class="arrow arrow-right" onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    
+      <script>
+        // Mảng chứa đường dẫn của các hình ảnh
+        var images = [
+          "imagine/4444.png",
+          "imagine/5555.png",
+          "imagine/3333.png",
+          "imagine/6666.png",
+          "imagine/9999.png",
+          "imagine/7777.png",
+          "imagine/8888.png",
+          "imagine/8888.png"
+        ];
+    
+        // Biến để lưu vị trí hiện tại của hình ảnh trong mảng
+        var currentImageIndex = 0;
+    
+        // Hàm chuyển đổi hình ảnh về phía trước
+        function nextImage() {
+          // Tăng vị trí hiện tại lên 1
+          currentImageIndex++;
+          // Nếu vị trí hiện tại vượt quá số lượng phần tử, đặt lại về 0
+          if (currentImageIndex >= images.length) {
+            currentImageIndex = 0;
+          }
+          // Hiển thị ảnh tương ứng với vị trí hiện tại
+          displayImage();
+        }
+    
+        // Hàm chuyển đổi hình ảnh về phía sau
+        function prevImage() {
+          // Giảm vị trí hiện tại xuống 1
+          currentImageIndex--;
+          // Nếu vị trí hiện tại nhỏ hơn 0, đặt lại về số lượng phần tử - 1
+          if (currentImageIndex < 0) {
+            currentImageIndex = images.length - 1;
+          }
+          // Hiển thị ảnh tương ứng với vị trí hiện tại
+          displayImage();
+        }
+    
+        // Hàm hiển thị ảnh tương ứng với vị trí hiện tại
+        function displayImage() {
+          // Ẩn tất cả các ảnh trong slideshow
+          var allSlides = document.querySelectorAll("#slideshow .slide");
+          allSlides.forEach(function(slide) {
+            slide.style.display = "none";
+          });
+          // Hiển thị ảnh tương ứng với vị trí hiện tại
+          var currentSlide = document.querySelector("#slideshow .slide:nth-child(" + (currentImageIndex + 1) + ")");
+          currentSlide.style.display = "block";
+        }
+        setInterval(nextImage, 3000);
+
+      </script>
+      <main>
+        <!-- Phần nội dung trang chủ -->
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <h2>Liên hệ</h2>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> Email: Stephenlin.com</p>
+                    <p><i class="fas fa-phone"></i> Số điện thoại: 0938521667</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: Địa chỉ của bạn</p>
+                </div>
+            </div>
+            <img src="imagine/c23.png" alt="aaa ảnh" class="contact-image">
+        </section>
+    </main>
+    <footer>
+      <!-- Footer content -->
+    </footer>
+    
+    </div>
+    
+    <script>
+      $(document).ready(function() {
+          setTimeout(function() {
+              $('#logo-container').fadeOut('slow', function() {
+                  $('#content').fadeIn('slow');
+              });
+          }, 1000); // Thời gian hiển thị logo (đơn vị: milliseconds)
+      });
+
+      </script>
+      
+  
+    
+    </body> 
+
+          <html>
+
