@@ -1,0 +1,685 @@
+/*body{
+    background-image: url('../imagine/234.png');
+    background-size: cover;
+    background-position-y:-100x ;
+}*/
+.container
+{
+    max-width: 960px;
+    margin: 0px auto;
+    padding: 15px;
+
+}
+header
+{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #4f4e4e;
+    padding: 10px 0px;
+}
+#header
+{
+    background-color: #000000;
+    padding: 10px 15px;
+}
+nav
+{
+    display: flex;
+    justify-content:space-between ;
+    justify-items: center;
+}
+#logo
+{
+    padding: 5px 0px;
+}
+#logo img
+{
+    max-width: 50px;
+    height: auto;
+}
+#main-menu
+{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#main-menu li a
+{
+    position:relative;
+    font-weight: bold;
+}
+#main-menu li a
+{    
+    text-transform: fantasy;
+    color: #f8f8f8;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+
+    
+}
+#main-menu ul.sub-menu
+{
+    position: absolute;
+    background-color:rgb(0, 0, 0);
+    padding: 15px 0px;
+    list-style: none;
+    width: 200px;
+    border: 1px soild #393838;
+    display: none;
+}
+#main-menu li:hover ul.sub-menu
+{
+    display: block;
+}
+
+#main-menu ul.sub-menu a
+{
+    padding: 8px 15px;
+    border-bottom: 1px solid #393838;
+}
+#main-menu ul.sub-menu li:hover a
+{
+    border-bottom: 1px solid rgb(228, 189, 189);
+}
+#main-menu ul.sub-menu li:last-child a
+{
+    border: none;
+}
+/*thiết lập khi hover*/
+#main-menu>li>a
+{
+    position: relative;
+}
+#main-menu>li>a::before
+{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: red;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#main-menu>li:hover>a::before
+{
+    width: 100%;
+}
+#mai-menu>li.has-chil::after
+{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
+    color: #f9f9f9;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    content: "cho";
+}
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(37, 37, 37, 0.9); /* Màu nền với độ trong suốt là 0.9 */
+    z-index: 1000; /* Đảm bảo header hiển thị trên tất cả các phần tử khác */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+  }
+  
+  #header.scrolled {
+    background-color: rgba(183, 178, 178, 0.781); /* Màu nền với độ trong suốt là 0.5 khi cuộn */
+  }
+#main-menu .sub-menu.has-child:hover::after
+{
+    color: red;
+}
+
+.containeri
+{
+    max-width: 960px;
+    margin: 0px auto;
+    padding: 15px;
+}
+.back-video
+{
+    width: 100%; /* Đặt chiều rộng video để đảm bảo nó phù hợp với kích thước của phần tử chứa */
+    height: auto; /* Chiều cao tự động tính toán để giữ tỷ lệ khung hình */
+     
+     
+    
+}
+@media(min-aspect-radio:16/9)
+{
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+/*font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
+/* Style cho liên hệ */
+/* Style cho liên hệ */
+/* Style cho liên hệ */
+#contact {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333; /* Màu chữ */
+  }
+  
+  /* Style icon */
+  .contact-info i {
+    margin-right: 10px;
+    color: #007bff; /* Màu của icon */
+    font-size: 24px;
+  }
+  
+  /* Hover effect */
+  .contact-info p:hover {
+    color: #007bff; /* Màu chữ khi hover */
+  }
+
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 100px 0; /* Điều chỉnh khoảng cách trên và dưới phần nội dung */
+  }
+  
+  /* Style cho phần nội dung */
+  #contact {
+    text-align: center;
+    color: #fff; /* Màu chữ */
+  }
+  
+  /* CSS cho mục lục */
+ 
+  body {
+    padding-top: 100px; /* Thêm padding-top để tránh lấn áp lên toc */
+  }
+  
+.toc {
+  height: 100%;
+  /* Thêm thuộc tính float để chúng đứng cạnh nhau */
+  float: left;
+  position: absolute; /* Đặt toc ở vị trí tương đối với body */
+  top: 19px; /* Đặt toc ở đầu trang */
+  left: 10px; /* Độ lệch từ mép trái */
+  max-height: 80vh; /* Chiều cao tối đa của toc (chiều cao cửa sổ trình duyệt) */
+  overflow-y: auto; /* Cho phép cuộn khi nội dung vượt quá chiều cao tối đa */
+  width: 400px; /* Độ rộng của toc */
+  font-size: 20px; /* Kích thước font chữ */
+  padding: 30px ; /* Khoảng cách giữa nội dung và viền ngoài của toc */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+  
+  .toc h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .toc li {
+    margin-bottom: 5px;
+  }
+  
+  .toc .sub-items {
+    display: none;
+  }
+  
+  .toc .open .sub-items {
+    display: block;
+  }
+  .toc li b {
+  font-weight: bold;
+}
+.toc {
+  background-image: url('imagine/1.gif'); /* Đường dẫn đến ảnh */
+  background-size: cover; /* Đảm bảo ảnh phù hợp với kích thước của toc */
+  background-position: center; /* Đặt ảnh nằm ở vị trí trung tâm */
+  padding-top: 150px; /* Khoảng cách giữa đỉnh toc và nội dung */
+  position: relative; /* Thiết lập vị trí tương đối cho toc */
+}
+
+.contact-image {
+  position: absolute; /* Đặt vị trí tuyệt đối cho ảnh */
+  top: 0; /* Đặt ảnh ở phía trên cùng */
+  left: 0; /* Đặt ảnh ở phía trái cùng */
+  width: 100%; /* Đảm bảo ảnh căn chỉnh theo chiều ngang của toc */
+  height: auto; /* Đảm bảo tỷ lệ khung hình của ảnh được duy trì */
+  z-index: -1; /* Đặt vị trí z-index để đặt ảnh phía sau toc */
+}
+
+
+
+
+.container {
+  position: relative; /* Đảm bảo tính tương đối cho các phần tử con */
+}
+
+.toc2 {
+  height: 100%;
+  /* Thêm thuộc tính float để chúng đứng cạnh nhau */
+  float:left;
+  position: absolute; /* Đặt toc ở vị trí tương đối với body */
+  top: 100%; /* Đặt toc ở vị trí top tính toán dựa trên chiều cao của header và thêm 20px */
+  left: 15px;; /* 20px là khoảng cách giữa toc và toc2 */
+  max-height: 80vh; /* Chiều cao tối đa của toc (chiều cao cửa sổ trình duyệt) */
+  overflow-y: auto; /* Cho phép cuộn khi nội dung vượt quá chiều cao tối đa */
+  margin-top: 20px; /* Thêm margin-top để tạo khoảng cách giữa toc và toc2 */
+  width: 400px; /* Độ rộng của toc */
+  font-size: 20px; /* Kích thước font chữ */
+  padding: 30px ; /* Khoảng cách giữa nội dung và viền ngoài của toc */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+  
+  .toc2 h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .toc2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .toc2 li {
+    margin-bottom: 5px;
+  }
+  
+  .toc2 .sub-items {
+    display: none;
+  }
+  
+  .toc2 .open .sub-items {
+    display: block;
+  }
+  .toc li b {
+  font-weight: bold;
+}
+.toc2 {
+  background-image: url('imagine/2.gif'); /* Đường dẫn đến ảnh */
+  background-size: cover; /* Đảm bảo ảnh phù hợp với kích thước của toc */
+  background-position: center; /* Đặt ảnh nằm ở vị trí trung tâm */
+  padding-top: 150px; /* Khoảng cách giữa đỉnh toc và nội dung */
+  position: relative; /* Thiết lập vị trí tương đối cho toc */
+}
+
+.contact-image {
+  position: absolute; /* Đặt vị trí tuyệt đối cho ảnh */
+  top: 0; /* Đặt ảnh ở phía trên cùng */
+  left: 0; /* Đặt ảnh ở phía trái cùng */
+  width: 100%; /* Đảm bảo ảnh căn chỉnh theo chiều ngang của toc */
+  height: auto; /* Đảm bảo tỷ lệ khung hình của ảnh được duy trì */
+  z-index: -1; /* Đặt vị trí z-index để đặt ảnh phía sau toc */
+}
+
+
+.toc3 {
+  max-height: 80vh;
+  top:19px;
+    overflow-y: auto;
+    width: 400px; /* Điều chỉnh chiều rộng của mục lục */
+    font-size: 20px;
+    left:20px;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+  
+  .toc3 h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .toc3 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .toc3 li {
+    margin-bottom: 5px;
+  }
+  
+  .toc3 .sub-items {
+    display: none;
+  }
+  
+  .toc3 .open .sub-items {
+    display: block;
+  }
+  .toc3 li b {
+  font-weight: bold;
+}
+.toc3 {
+  background-image: url('imagine/3.gif'); /* Đường dẫn đến ảnh */
+  background-size: cover; /* Đảm bảo ảnh phù hợp với kích thước của toc */
+  background-position: center; /* Đặt ảnh nằm ở vị trí trung tâm */
+  padding-top: 150px; /* Khoảng cách giữa đỉnh toc và nội dung */
+  position: relative; /* Thiết lập vị trí tương đối cho toc */
+}
+
+.contact-image {
+  position: absolute; /* Đặt vị trí tuyệt đối cho ảnh */
+  top: 0; /* Đặt ảnh ở phía trên cùng */
+  left: 0; /* Đặt ảnh ở phía trái cùng */
+  width: 100%; /* Đảm bảo ảnh căn chỉnh theo chiều ngang của toc */
+  height: auto; /* Đảm bảo tỷ lệ khung hình của ảnh được duy trì */
+  z-index: -1; /* Đặt vị trí z-index để đặt ảnh phía sau toc */
+}
+/* Định dạng toc3 khi có lớp "toc-fixed" */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toc4 {
+  height: 100%;
+  /* Thêm thuộc tính float để chúng đứng cạnh nhau */
+  float: left;
+  position: fixed; /* Đặt toc ở vị trí tương đối với body */
+  top: 400px; /* Đặt toc ở đầu trang */
+  left: -915px; /* Độ lệch từ mép trái */
+  max-height: 80vh; /* Chiều cao tối đa của toc (chiều cao cửa sổ trình duyệt) */
+  overflow-y: auto; /* Cho phép cuộn khi nội dung vượt quá chiều cao tối đa */
+  width: 400px; /* Độ rộng của toc */
+  font-size: 20px; /* Kích thước font chữ */
+  padding: 30px ; /* Khoảng cách giữa nội dung và viền ngoài của toc */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
+  
+  .toc4 h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .toc4 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .toc4 li {
+    margin-bottom: 5px;
+  }
+  
+  .toc4 .sub-items {
+    display: none;
+  }
+  
+  .toc4 .open .sub-items {
+    display: block;
+  }
+  .toc4 li b {
+  font-weight: bold;
+}
+.toc4 {
+  background-image: url('imagine/4.gif'); /* Đường dẫn đến ảnh */
+  background-size: cover; /* Đảm bảo ảnh phù hợp với kích thước của toc */
+  background-position: center; /* Đặt ảnh nằm ở vị trí trung tâm */
+  padding-top: 150px; /* Khoảng cách giữa đỉnh toc và nội dung */
+  position: relative; /* Thiết lập vị trí tương đối cho toc */
+}
+
+.contact-image {
+  position: absolute; /* Đặt vị trí tuyệt đối cho ảnh */
+  top: 0; /* Đặt ảnh ở phía trên cùng */
+  left: 0; /* Đặt ảnh ở phía trái cùng */
+  width: 100%; /* Đảm bảo ảnh căn chỉnh theo chiều ngang của toc */
+  height: auto; /* Đảm bảo tỷ lệ khung hình của ảnh được duy trì */
+  z-index: -1; /* Đặt vị trí z-index để đặt ảnh phía sau toc */
+}
+
+.toc5 {
+  height: 100%;
+  /* Thêm thuộc tính float để chúng đứng cạnh nhau */
+  float:left;
+  position: fixed; /* Đặt toc ở vị trí tương đối với body */
+  top:194px; /* Đặt toc ở vị trí top tính toán dựa trên chiều cao của header và thêm 20px */
+  left: 480px;; /* 20px là khoảng cách giữa toc và toc2 */
+  max-height: 80vh; /* Chiều cao tối đa của toc (chiều cao cửa sổ trình duyệt) */
+  overflow-y: auto; /* Cho phép cuộn khi nội dung vượt quá chiều cao tối đa */
+  margin-top: 20px; /* Thêm margin-top để tạo khoảng cách giữa toc và toc2 */
+  width: 400px; /* Độ rộng của toc */
+  font-size: 20px; /* Kích thước font chữ */
+  padding: 30px ; /* Khoảng cách giữa nội dung và viền ngoài của toc */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
+  
+  .toc5 h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .toc5 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .toc5 li {
+    margin-bottom: 5px;
+  }
+  
+  .toc5 .sub-items {
+    display: none;
+  }
+  
+  .toc5 .open .sub-items {
+    display: block;
+  }
+  .toc5 li b {
+  font-weight: bold;
+}
+.toc5 {
+  background-image: url('imagine/5.gif'); /* Đường dẫn đến ảnh */
+  background-size: cover; /* Đảm bảo ảnh phù hợp với kích thước của toc */
+  background-position: center; /* Đặt ảnh nằm ở vị trí trung tâm */
+  padding-top: 150px; /* Khoảng cách giữa đỉnh toc và nội dung */
+  position: relative; /* Thiết lập vị trí tương đối cho toc */
+}
+
+.contact-image {
+  position: absolute; /* Đặt vị trí tuyệt đối cho ảnh */
+  top: 0; /* Đặt ảnh ở phía trên cùng */
+  left: 0; /* Đặt ảnh ở phía trái cùng */
+  width: 100%; /* Đảm bảo ảnh căn chỉnh theo chiều ngang của toc */
+  height: auto; /* Đảm bảo tỷ lệ khung hình của ảnh được duy trì */
+  z-index: -1; /* Đặt vị trí z-index để đặt ảnh phía sau toc */
+}
+
+.toc6 {
+  height: 100%;
+  /* Thêm thuộc tính float để chúng đứng cạnh nhau */
+  float:left;
+  position: fixed; /* Đặt toc ở vị trí tương đối với body */
+  top: 194px; /* Đặt toc ở vị trí top tính toán dựa trên chiều cao của header và thêm 20px */
+  left: 493px;; /* 20px là khoảng cách giữa toc và toc2 */
+  max-height: 80vh; /* Chiều cao tối đa của toc (chiều cao cửa sổ trình duyệt) */
+  overflow-y: auto; /* Cho phép cuộn khi nội dung vượt quá chiều cao tối đa */
+  margin-top: 20px; /* Thêm margin-top để tạo khoảng cách giữa toc và toc2 */
+  width: 400px; /* Độ rộng của toc */
+  font-size: 20px; /* Kích thước font chữ */
+  padding: 30px ; /* Khoảng cách giữa nội dung và viền ngoài của toc */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+  
+  .toc6 h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .toc6 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .toc6 li {
+    margin-bottom: 5px;
+  }
+  
+  .toc6 .sub-items {
+    display: none;
+  }
+  
+  .toc6 .open .sub-items {
+    display: block;
+  }
+  .toc6 li b {
+  font-weight: bold;
+}
+.toc6 {
+  background-image: url('imagine/6.gif'); /* Đường dẫn đến ảnh */
+  background-size: cover; /* Đảm bảo ảnh phù hợp với kích thước của toc */
+  background-position: center; /* Đặt ảnh nằm ở vị trí trung tâm */
+  padding-top: 150px; /* Khoảng cách giữa đỉnh toc và nội dung */
+  position: relative; /* Thiết lập vị trí tương đối cho toc */
+}
+
+.contact-image {
+  position: absolute; /* Đặt vị trí tuyệt đối cho ảnh */
+  top: 0; /* Đặt ảnh ở phía trên cùng */
+  left: 0; /* Đặt ảnh ở phía trái cùng */
+  width: 100%; /* Đảm bảo ảnh căn chỉnh theo chiều ngang của toc */
+  height: auto; /* Đảm bảo tỷ lệ khung hình của ảnh được duy trì */
+  z-index: -1; /* Đặt vị trí z-index để đặt ảnh phía sau toc */
+}
+
+.toc7 {
+  height: 100%;
+  /* Thêm thuộc tính float để chúng đứng cạnh nhau */
+  float:left;
+  position: absolute; /* Đặt toc ở vị trí tương đối với body */
+  top: 999px; /* Đặt toc ở vị trí top tính toán dựa trên chiều cao của header và thêm 20px */
+  left: 15px;; /* 20px là khoảng cách giữa toc và toc2 */
+  max-height: 80vh; /* Chiều cao tối đa của toc (chiều cao cửa sổ trình duyệt) */
+  overflow-y: auto; /* Cho phép cuộn khi nội dung vượt quá chiều cao tối đa */
+  margin-top: 20px; /* Thêm margin-top để tạo khoảng cách giữa toc và toc2 */
+  width: 400px; /* Độ rộng của toc */
+  font-size: 20px; /* Kích thước font chữ */
+  padding: 30px ; /* Khoảng cách giữa nội dung và viền ngoài của toc */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+  
+  .toc7 h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .toc7 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .toc7 li {
+    margin-bottom: 5px;
+  }
+  
+  .toc7 .sub-items {
+    display: none;
+  }
+  
+  .toc7 .open .sub-items {
+    display: block;
+  }
+  .toc7 li b {
+  font-weight: bold;
+}
+.toc7 {
+  background-image: url('imagine/7.gif'); /* Đường dẫn đến ảnh */
+  background-size: cover; /* Đảm bảo ảnh phù hợp với kích thước của toc */
+  background-position: center; /* Đặt ảnh nằm ở vị trí trung tâm */
+  padding-top: 150px; /* Khoảng cách giữa đỉnh toc và nội dung */
+  position: relative; /* Thiết lập vị trí tương đối cho toc */
+}
+
+.contact-image {
+  position: absolute; /* Đặt vị trí tuyệt đối cho ảnh */
+  top: 0; /* Đặt ảnh ở phía trên cùng */
+  left: 0; /* Đặt ảnh ở phía trái cùng */
+  width: 100%; /* Đảm bảo ảnh căn chỉnh theo chiều ngang của toc */
+  height: auto; /* Đảm bảo tỷ lệ khung hình của ảnh được duy trì */
+  z-index: -1; /* Đặt vị trí z-index để đặt ảnh phía sau toc */
+}
+
+
+
+.toc {
+  z-index: 7;
+}
+
+.toc2 {
+  z-index: 6;
+}
+
+.toc3 {
+  z-index: 5;
+}
+
+.toc4 {
+  z-index: 4;
+}
+
+.toc5 {
+  z-index: 3;
+}
+
+.toc6 {
+  z-index: 2;
+}
+
+.toc7 {
+  z-index: 1;
+}

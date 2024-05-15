@@ -1,0 +1,234 @@
+
+/*body{
+    background-image: url('../imagine/234.png');
+    background-size: cover;
+    background-position-y:-100x ;
+}*/
+.container
+{
+    max-width: 960px;
+    margin: 0px auto;
+    padding: 15px;
+
+}
+header
+{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px soild #4f4e4e;
+    padding: 10px 0px;
+}
+#header
+{
+    background-color: #000000;
+    padding: 10px 15px;
+}
+nav
+{
+    display: flex;
+    justify-content:space-between ;
+    justify-items: center;
+}
+#logo
+{
+    padding: 5px 0px;
+}
+#logo img
+{
+    max-width: 50px;
+    height: auto;
+}
+#main-menu
+{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#main-menu li a
+{
+    position:relative;
+    font-weight: bold;
+}
+#main-menu li a
+{    
+    text-transform: fantasy;
+    color: #f8f8f8;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+
+    
+}
+#main-menu ul.sub-menu
+{
+    position: absolute;
+    background-color:rgb(0, 0, 0);
+    padding: 15px 0px;
+    list-style: none;
+    width: 200px;
+    border: 1px soild #393838;
+    display: none;
+}
+#main-menu li:hover ul.sub-menu
+{
+    display: block;
+}
+
+#main-menu ul.sub-menu a
+{
+    padding: 8px 15px;
+    border-bottom: 1px solid #393838;
+}
+#main-menu ul.sub-menu li:hover a
+{
+    border-bottom: 1px solid rgb(228, 189, 189);
+}
+#main-menu ul.sub-menu li:last-child a
+{
+    border: none;
+}
+/*thiết lập khi hover*/
+#main-menu>li>a
+{
+    position: relative;
+}
+#main-menu>li>a::before
+{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: red;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#main-menu>li:hover>a::before
+{
+    width: 100%;
+}
+#mai-menu>li.has-chil::after
+{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
+    color: #f9f9f9;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    content: "cho";
+}
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(37, 37, 37, 0.9); /* Màu nền với độ trong suốt là 0.9 */
+    z-index: 1000; /* Đảm bảo header hiển thị trên tất cả các phần tử khác */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+  }
+  
+  #header.scrolled {
+    background-color: rgba(183, 178, 178, 0.781); /* Màu nền với độ trong suốt là 0.5 khi cuộn */
+  }
+#main-menu .sub-menu.has-child:hover::after
+{
+    color: red;
+}
+
+.containeri
+{
+    max-width: 960px;
+    margin: 0px auto;
+    padding: 15px;
+}
+.back-video
+{
+    width: 100%; /* Đặt chiều rộng video để đảm bảo nó phù hợp với kích thước của phần tử chứa */
+    height: auto; /* Chiều cao tự động tính toán để giữ tỷ lệ khung hình */
+     
+     
+    
+}
+@media(min-aspect-radio:16/9)
+{
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+/*font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
+/* Style cho liên hệ */
+/* Style cho liên hệ */
+/* Style cho liên hệ */
+#contact {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  .contact-info p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333; /* Màu chữ */
+  }
+  
+  /* Style icon */
+  .contact-info i {
+    margin-right: 10px;
+    color: #007bff; /* Màu của icon */
+    font-size: 24px;
+  }
+  
+  /* Hover effect */
+  .contact-info p:hover {
+    color: #007bff; /* Màu chữ khi hover */
+  }
+
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 100px 0; /* Điều chỉnh khoảng cách trên và dưới phần nội dung */
+  }
+  
+  /* Style cho phần nội dung */
+  #contact {
+    text-align: center;
+    color: #fff; /* Màu chữ */
+  }
+  #chủ-đề img {
+    position: relative; /* Đảm bảo hình ảnh "hoa.gif" có vị trí tương đối */
+    width: 100%; /* Chiều rộng của hình ảnh "hoa.gif" */
+    height: auto; /* Chiều cao tự động điều chỉnh */
+    z-index: 1; /* Đảm bảo hình ảnh "hoa.gif" hiển thị phía trên */
+  }
+
+  #nút-liên-kết {
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    top: 62%; /* Đặt vị trí theo chiều dọc */
+    left: 130px; /* Đặt vị trí theo chiều ngang */
+    transform: translateY(-49%); /* Để căn giữa theo chiều dọc */
+    z-index: 999; /* Đảm bảo các nút luôn nằm trên nền */
+  }
+  
+  #nút-liên-kết a {
+    width: 205px;
+    display: block; /* Hiển thị các nút là block */
+    margin-bottom: 65px; /* Khoảng cách giữa các nút */
+    padding: 25px; /* Kích thước nút */
+    background-color: rgba(255, 255, 255, 0.7); /* Màu nền với độ trong suốt */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: black; /* Màu chữ */
+    border-radius: 10px; /* Bo tròn góc */
+    opacity: 0; /* Ẩn các nút liên kết */
+    transition: opacity 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+  }
